@@ -4,7 +4,8 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'cracker-house',
     environment: environment,
-    rootURL: '/',
+    rootURL: '/dist',
+    baseURL: '/dist',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
@@ -30,6 +31,10 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
   }
+
+	if (environment === 'production') {
+		ENV.locationType = 'hash'
+	}
 
   if (environment === 'test') {
     // Testem prefers this...

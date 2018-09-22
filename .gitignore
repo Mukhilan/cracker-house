@@ -1,17 +1,16 @@
-# See http://help.github.com/ignore-files/ for more about ignoring files.
-
-# compiled output
-/dist
-/tmp
-
-# dependencies
-/node_modules
-/bower_components
-
-# misc
-/.sass-cache
-/connect.lock
-/coverage/*
-/libpeerconnection.log
-npm-debug.log*
-testem.log
+node_modules
+/.zide_resources
+WebContent
+app.json
+.recognizer
+/bin
+.cache
+.cache-tests
+.cache-main
+/.proto_out
+.settings
+.idea
+.buildpath
+build/app.properties
+build/dev/security-privatekey.xml
+build/dev/sas.keystore
