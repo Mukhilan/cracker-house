@@ -81,6 +81,29 @@ export default Ember.Controller.extend({
 			meta: "10 pcs/box",
 			price: "Rs. 100 per box"
 		}]
+	}, {
+		name: 'BOMBS',
+		items: [{
+			name: 'Hydro bomb',
+			imageURL: 'assets/images/bombs/bomb-1.jpg',
+			meta: "10 pcs/box",
+			price: "Rs. 100 per box"
+		},{
+			name: 'Mini bullet bomb',
+			imageURL: 'assets/images/bombs/bomb-2.jpg',
+			meta: "10 pcs/box",
+			price: "Rs. 170 per box"
+		},{
+			name: 'Super bullet',
+			imageURL: 'assets/images/bombs/bomb-3.jpg',
+			meta: "10 pcs/box",
+			price: "Rs. 70 per box"
+		},{
+			name: '555 time bomb',
+			imageURL: 'assets/images/bombs/bomb-4.jpg',
+			meta: "10 pcs/box",
+			price: "Rs. 70 per box"
+		}]
 	}],
 
 	selectedCategory: 'all',
