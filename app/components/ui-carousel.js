@@ -9,7 +9,7 @@ export default Ember.Component.extend({
 			$('#owl-demo').owlCarousel({
 				items: 1,
 				autoplay: true,
-				autoplayTimeout: 2000,
+				autoplayTimeout: 1500,
 				autoplayHoverPause: true,
 				loop: true,
 				dots: false
