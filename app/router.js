@@ -12,6 +12,7 @@ Router.map(function() {
       resetNamespace: true
   });
   this.route('cracker-list');
+  this.route('contact-us');
 });
 
 export default Router;
