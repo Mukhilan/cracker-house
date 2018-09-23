@@ -7,36 +7,40 @@
 	</div>
 </div>
 
-<h2 class="ui dividing header">Featured crackers</h2>
+<h2 class="ui dividing header">Best selling crackers</h2>
 <div class="ui four column grid featured-crackers">
-	<div class="column">
-		<div class="ui fluid card">
-			<div class="image">
-				<img src="assets/images/5000-wala.jpg">
-			</div>
-			<div class="content">
-					<a class="header">5000 wala lar</a>
-			</div>
-		</div>
-	</div>
-	<div class="column">
-		<div class="ui fluid card">
-			<div class="image">
-				<img src="assets/images/rang-de-basnti.jpg">
-			</div>
-			<div class="content">
-				<a class="header">Rang de basanti</a>
+	{{#each bestSellingCrackers as |bestSellingCracker|}}
+		<div class="column">
+			<div class="ui fluid card">
+				<div class="image">
+					<img src="{{bestSellingCracker.imageURL}}"  style="height: 250px;">
+				</div>
+				<div class="content">
+					<a class="header">{{bestSellingCracker.name}}</a>
+				</div>
 			</div>
 		</div>
-	</div>
-	<div class="column">
-		<div class="ui fluid card">
-			<div class="image">
-				<img src="assets/images/atom_bomb.jpg">
-			</div>
-			<div class="content">
-				<a class="header">Atom bomb</a>
-			</div>
+	{{/each}}
+</div>
+
+<div class="ui divider"></div>
+<div class="ui two column center aligned divided very relaxed stackable grid container">
+	<div class="row">
+		<div class="column">
+			<h2 class="ui icon header">
+				<img class="ui icon image" src="assets/images/banner-2.jpg">
+				100+ Crackers
+			</h2>
+			<p>It is the first company in India to introduce color items in fireworks, and its products are of excellent quality and prices offered are highly competitive.</p>
+			{{#link-to "cracker-list" class="ui large button item text uppercase"}}See our Cracker categories{{/link-to}}
+		</div>
+		<div class="column">
+			<h2 class="ui icon header">
+				<img class="ui icon image" src="/assets/images/contact-us.jpg" style="height: 180px;width: 550px;">
+				Getting in touch is easy
+			</h2>
+			<p>Do you have questions on how to do payments for crackers?. Please contact us this email <b>crackerhousesivakasi@gmail.com</b>. We will contact you shortly.</p>
+			{{#link-to "contact-us" class="ui large button item text uppercase"}}Contact us{{/link-to}}
 		</div>
 	</div>
 </div>
