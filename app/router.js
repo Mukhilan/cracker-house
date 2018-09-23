@@ -14,6 +14,7 @@ Router.map(function() {
   this.route('cracker-list');
   this.route('contact-us');
   this.route('price-list');
+  this.route('fancy-crackers');
 });
 
 export default Router;
