@@ -16,8 +16,8 @@ export default Ember.Service.extend({
 		get() {
 			if(this.get('isMobileView')) {
 				return {
-					width: '160px',
-					height: '150px'
+					width: '150px',
+					height: '140px'
 				}
 			} else {
 				return {
