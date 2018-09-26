@@ -1,44 +1,15 @@
-<div class="ui brown three item inverted menu" style="margin-bottom: 0;">
-	<a class="item" href="mailto:crackerhousesivakasi@gmail.com">
-		<h5 class="ui text bold">
-			<i class="envelope icon"></i>
-			crackerhousesivakasi@gmail.com
-		</h5>
-	</a>
-	<div class="horizontally fitted item">
-		<a class="ui red basic label large">Minumum order Rs.2000/-</a>
+<div class="ui top fixed menu inverted">
+	<div class="mobile-view-only">
+		<button class="ui button icon basic" {{action "toggleMenu"}}><i class="ui icon bars"></i></button>
 	</div>
-	<div class="right menu"></div>
-</div>
-
-<div>
-	<div class="ui basic segment">
-		<div class="ui grid">
-			<div class="five wide column">
-				<img src="assets/images/cornation-logo.jpg" style="height: 100px; margin-left: 30px;"/>
-			</div>
-			<div class="six wide center aligned column" style="margin-top: 30px;">
-				<h1>
-					Welcome to Cracker House
-				</h1>
-			</div>
-
-			<div class="four wide right aligned column" style="margin-top: 30px;">
-				<h2>
-					<i class="phone icon"></i>
-					For bulk orders,
-					<br>call us @ +91 6383154783
-				</h2>
-
-				<a href="assets/cracker-list.pdf" target="_blank">Download our cracker price list</a>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="ui inverted segment" style="margin:0;">
 	<div class="ui container">
-		<div class="ui stackable inverted menu secondary pointing">
+		<div class="ui blue stackable menu secondary pointing">
+			<div class="mobile-view-only">
+				<div class="item text uppercase flex space between header">
+					Menu
+					<i class="icon close" {{action "toggleMenu" false}}></i>
+				</div>
+			</div>
 			{{#link-to "home" class="item text uppercase"}}Home{{/link-to}}
 			{{#link-to "cracker-list" class="item text uppercase"}}Cracker categories{{/link-to}}
 			{{#link-to "fancy-crackers" class="item text uppercase"}}Fancy crackers{{/link-to}}
@@ -47,4 +18,3 @@
 		</div>
 	</div>
 </div>
-

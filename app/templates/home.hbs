@@ -1,46 +1,87 @@
-<div class="ui three stackable cards">
-	<div class="card" style="width: 810px;">
-		{{ui-carousel}}
+<div class="site-banner" style="background-image: url('assets/images/app-bg.jpg') ">
+	<div class="empty"></div>
+
+	<div class="banner-message">
+		<div class="ui message ui pink aligned left">
+			<div class="header">
+				Minumum order Rs.2000-/
+			</div>
+		</div>
 	</div>
-	<div class="card" style="width: 285px;">
-		Ad section
+
+	<div class="head">
+		<div class="logos">
+			<img src="assets/images/cornation-logo.jpg" style="height: 150px;"/>
+		</div>
+		<h1 class="ui center aligned" style="font-size: 42px;">
+			Welcome to Cracker House
+		</h1>
+		<h3>
+			For bulk orders, email or call us
+			<br><i class="mail icon"></i> crackerhousesivakasi@gmail.com
+			<br><i class="phone icon"></i> +91 6383154783
+		</h3>
+		<div class="meta">
+			<a href="assets/cracker-list.pdf" target="_blank">Download our cracker price list</a>
+		</div>
+	</div>
+
+	<div class="meta">
+		<a class="ui circular facebook icon button" target="_blank" href="https://www.facebook.com/pages/Coronation-Fireworks/372241559527609">
+			<i class="facebook icon"></i>
+		</a>
+		<a class="ui circular linkedin icon button" target="_blank" href="https://www.linkedin.com/company/sri-cornation-fireworks-private-limited/">
+			<i class="linkedin icon"></i>
+		</a>
+		<a class="ui circular google plus icon button" target="_blank" href="https://plus.google.com/110957537120703923015">
+			<i class="google plus icon"></i>
+		</a>
 	</div>
 </div>
 
-<h2 class="ui dividing header">Best selling crackers</h2>
-<div class="ui four column grid featured-crackers">
-	{{#each bestSellingCrackers as |bestSellingCracker|}}
-		<div class="column">
-			<div class="ui fluid card">
+<div class="ui container" style="padding: 32px 0;">
+	<div class="ui three stackable cards">
+		<div class="card" style="width: 810px;">
+			{{ui-carousel}}
+		</div>
+		<div class="card" style="width: 285px;">
+			Ad section
+		</div>
+	</div>
+
+	<h2 class="ui dividing header">Best selling crackers</h2>
+	<div class="ui link cards">
+		{{#each bestSellingCrackers as |bestSellingCracker|}}
+			<div class="card" style="width: {{generalService.crackerCardUiProps.width}};">
 				<div class="image">
-					<img src="{{bestSellingCracker.imageURL}}"  style="height: 250px;">
+					<img src="{{bestSellingCracker.imageURL}}" style="height: {{generalService.crackerCardUiProps.height}};">
 				</div>
 				<div class="content">
 					<a class="header">{{bestSellingCracker.name}}</a>
 				</div>
 			</div>
-		</div>
-	{{/each}}
-</div>
+		{{/each}}
+	</div>
 
-<div class="ui divider"></div>
-<div class="ui two column center aligned divided very relaxed stackable grid container">
-	<div class="row">
-		<div class="column">
-			<h2 class="ui icon header">
-				<img class="ui icon image" src="assets/images/banner-2.jpg">
-				100+ Crackers
-			</h2>
-			<p>It is the first company in India to introduce color items in fireworks, and its products are of excellent quality and prices offered are highly competitive.</p>
-			{{#link-to "cracker-list" class="ui large button item text uppercase"}}See our Cracker categories{{/link-to}}
-		</div>
-		<div class="column">
-			<h2 class="ui icon header">
-				<img class="ui icon image" src="assets/images/contact-us.jpg" style="height: 180px;width: 550px;">
-				Getting in touch is easy
-			</h2>
-			<p>Do you have questions on how to do payments for crackers?. Please contact us this email <b>crackerhousesivakasi@gmail.com</b>. We will contact you shortly.</p>
-			{{#link-to "contact-us" class="ui large button item text uppercase"}}Contact us{{/link-to}}
+	<div class="ui divider"></div>
+	<div class="ui two column center aligned divided very relaxed stackable grid container">
+		<div class="row">
+			<div class="column">
+				<h2 class="ui icon header">
+					<img class="ui icon image" src="assets/images/banner-2.jpg">
+					100+ Crackers
+				</h2>
+				<p>It is the first company in India to introduce color items in fireworks, and its products are of excellent quality and prices offered are highly competitive.</p>
+				{{#link-to "cracker-list" class="ui large button item text uppercase"}}See our Cracker categories{{/link-to}}
+			</div>
+			<div class="column">
+				<h2 class="ui icon header">
+					<img class="ui icon image" src="assets/images/contact-us.jpg" style="height: 180px;width: 550px;">
+					Getting in touch is easy
+				</h2>
+				<p>Do you have questions on how to do payments for crackers?. Please contact us this email <b>crackerhousesivakasi@gmail.com</b>. We will contact you shortly.</p>
+				{{#link-to "contact-us" class="ui large button item text uppercase"}}Contact us{{/link-to}}
+			</div>
 		</div>
 	</div>
 </div>

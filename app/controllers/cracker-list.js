@@ -1,7 +1,9 @@
 import Ember from 'ember';
-import computed from 'ember-computed';
+import injectService from 'ember-service/inject';
 
 export default Ember.Controller.extend({
+	generalService: injectService('general-service'),
+
 	crackerCategories: [{
 		name: 'GARLANDS',
 		items: [{

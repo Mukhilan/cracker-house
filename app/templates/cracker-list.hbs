@@ -1,27 +1,49 @@
-<div class="ui form" style="width: 700px;">
-	<div class="ui field">
-		<label class="ui header">Select Cracker category</label>
-		{{#ui-dropdown class="selection top margin8 icon-dropdown"}}
-			<i class="dropdown icon"></i>
-			<div class="text">All categories</div>
-			<div class="menu">
-				<div class="item" {{action "onCategoryChange" "all"}}>All categories</div>
-				{{#each crackerCategories as |crackerCategory|}}
-					<div class="item" {{action "onCategoryChange" crackerCategory}}> {{crackerCategory.name}}</div>
+<div class="ui container route-container">
+	<div class="ui form" style="width: 700px;">
+		<div class="ui field">
+			<label class="ui header">Select Cracker category</label>
+			{{#ui-dropdown class="selection top margin8 icon-dropdown"}}
+				<i class="dropdown icon"></i>
+				<div class="text">All categories</div>
+				<div class="menu">
+					<div class="item" {{action "onCategoryChange" "all"}}>All categories</div>
+					{{#each crackerCategories as |crackerCategory|}}
+						<div class="item" {{action "onCategoryChange" crackerCategory}}> {{crackerCategory.name}}</div>
+					{{/each}}
+				</div>
+			{{/ui-dropdown}}
+		</div>
+	</div>
+
+	{{#if (eq selectedCategory 'all')}}
+		{{#each crackerCategories as |crackerCategory|}}
+			<h2 class="ui dividing header">{{crackerCategory.name}}</h2>
+			<div class="ui link cards">
+				{{#each crackerCategory.items as |categoryItem|}}
+					<div class="card" style="width: {{generalService.crackerCardUiProps.width}};">
+						<div class="image">
+							<img src="{{categoryItem.imageURL}}" style="height: {{generalService.crackerCardUiProps.height}};">
+						</div>
+						<div class="content">
+							<a class="header">{{categoryItem.name}}</a>
+							<div class="meta">
+								<a>{{categoryItem.meta}}</a>
+							</div>
+							<div class="description">
+								{{categoryItem.price}}
+							</div>
+						</div>
+					</div>
 				{{/each}}
 			</div>
-		{{/ui-dropdown}}
-	</div>
-</div>
-
-{{#if (eq selectedCategory 'all')}}
-	{{#each crackerCategories as |crackerCategory|}}
-		<h2 class="ui dividing header">{{crackerCategory.name}}</h2>
+		{{/each}}
+	{{else}}
+		<h2 class="ui dividing header">{{selectedCategory.name}}</h2>
 		<div class="ui link cards">
-			{{#each crackerCategory.items as |categoryItem|}}
-				<div class="card" style="width: 270px;">
+			{{#each selectedCategory.items as |categoryItem|}}
+				<div class="card" style="width: {{generalService.crackerCardUiProps.width}};">
 					<div class="image">
-						<img src="{{categoryItem.imageURL}}" style="height: 250px;">
+						<img src="{{categoryItem.imageURL}}" style="height: {{generalService.crackerCardUiProps.height}};">
 					</div>
 					<div class="content">
 						<a class="header">{{categoryItem.name}}</a>
@@ -35,25 +57,5 @@
 				</div>
 			{{/each}}
 		</div>
-	{{/each}}
-{{else}}
-	<h2 class="ui dividing header">{{selectedCategory.name}}</h2>
-	<div class="ui link cards">
-		{{#each selectedCategory.items as |categoryItem|}}
-			<div class="card" style="width: 270px;">
-				<div class="image">
-					<img src="{{categoryItem.imageURL}}" style="height: 250px;">
-				</div>
-				<div class="content">
-					<a class="header">{{categoryItem.name}}</a>
-					<div class="meta">
-						<a>{{categoryItem.meta}}</a>
-					</div>
-					<div class="description">
-						{{categoryItem.price}}
-					</div>
-				</div>
-			</div>
-		{{/each}}
-	</div>
-{{/if}}
+	{{/if}}
+</div>

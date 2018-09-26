@@ -1,6 +1,9 @@
 import Ember from 'ember';
+import injectService from 'ember-service/inject';
 
 export default Ember.Controller.extend({
+	generalService: injectService('general-service'),
+
 	bestSellingCrackers: [{
 		name: '5000 wala lar',
 		imageURL: 'assets/images/garlands/garland-4.jpg'
