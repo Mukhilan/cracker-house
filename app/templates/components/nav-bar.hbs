@@ -10,11 +10,11 @@
 					<i class="icon close" {{action "toggleMenu" false}}></i>
 				</div>
 			</div>
-			{{#link-to "home" class="item text uppercase"}}Home{{/link-to}}
-			{{#link-to "cracker-list" class="item text uppercase"}}Cracker categories{{/link-to}}
-			{{#link-to "fancy-crackers" class="item text uppercase"}}Fancy crackers{{/link-to}}
-			{{#link-to "price-list" class="item text uppercase"}}Cracker price list{{/link-to}}
-			{{#link-to "contact-us" class="item text uppercase"}}Contact us{{/link-to}}
+			{{#link-to "home" class="item text uppercase" invokeAction=(action "toggleMenu" false)}}Home{{/link-to}}
+			{{#link-to "cracker-list" class="item text uppercase" invokeAction=(action "toggleMenu" false)}}Cracker categories{{/link-to}}
+			{{#link-to "fancy-crackers" class="item text uppercase" invokeAction=(action "toggleMenu" false)}}Fancy crackers{{/link-to}}
+			{{#link-to "price-list" class="item text uppercase" invokeAction=(action "toggleMenu" false)}}Cracker price list{{/link-to}}
+			{{#link-to "contact-us" class="item text uppercase" invokeAction=(action "toggleMenu" false)}}Contact us{{/link-to}}
 		</div>
 	</div>
 </div>
