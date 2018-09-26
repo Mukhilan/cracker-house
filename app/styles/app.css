@@ -18,7 +18,10 @@
 }
 
 .route-container {
-    margin: 100px 0;
+    margin-top: 100px;
+    height: 100%;
+    min-height: 100%;
+    margin-bottom: 20px;
 }
 
 .ui.top.menu .mobile-view-only {

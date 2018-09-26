@@ -1,5 +1,14 @@
 <div class="ui container route-container">
-	<object data="{{pdfFile}}#view=FitH	" type="application/pdf" width="100%" height="800px">
-		<p>It appears you don't have a PDF plugin for this browser. you can <a href="{{pdfFile}}">click here to download the PDF file.</a></p>
-	</object>
+	<div class="ui tabular menu">
+		{{log priceListTypes}}
+		{{#each priceListTypes as |priceListType|}}
+			<a class="item {{if (eq selectedPriceType.title priceListType.title) "active"}}" {{action "selectPriceType" priceListType}}>
+				<h5>{{priceListType.title}}</h5>
+			</a>
+		{{/each}}
+	</div>
+
+	{{#each selectedPriceType.images as |imageUrl|}}
+		<img src="{{imageUrl}}" style="width: {{generalService.priceTypeImageUiProps.width}}; height: {{generalService.priceTypeImageUiProps.height}};">
+	{{/each}}
 </div>

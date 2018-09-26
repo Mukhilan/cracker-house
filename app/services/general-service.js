@@ -37,8 +37,8 @@ export default Ember.Service.extend({
 				}
 			} else {
 				return {
-					width: '600px',
-					height: '450px'
+					width: '700px',
+					height: '550px'
 				}
 			}
 		}
@@ -56,5 +56,21 @@ export default Ember.Service.extend({
 				}
 			}
 		}
-	})
+	}),
+
+	priceTypeImageUiProps: computed('isMobileView', {
+		get() {
+			if(this.get('isMobileView')) {
+				return {
+					width: '400px',
+					height: '700px'
+				}
+			} else {
+				return {
+					width: '1200px',
+					height: '1200px'
+				}
+			}
+		}
+	}),
 });
